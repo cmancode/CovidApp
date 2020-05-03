@@ -1,0 +1,64 @@
+<div class="text-center">
+    <h3>Información Mundial -  {{ datosgobales.updated | date: 'short' }}</h3>
+</div>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card card-body pt-2">
+            <p class="font-weight-light  mb-0">Casos</p>
+            <div class="text-center">
+                <h2 class="casos">{{ datosgobales.cases | currency:'':'':'0.0' }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 ">
+        <div class="card card-body pt-2">
+            <p class="font-weight-light  mb-0">Recuperados</p>
+            <div class="text-center">
+                <h2 class="recuperados">{{ datosgobales.recovered | currency:'':'':'0.0' }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card card-body pt-2">
+            <p class="font-weight-light  mb-0">Muertes</p>
+            <div class="text-center">
+                <h2 class="muertes">{{ datosgobales.deaths | currency:'':'':'0.0' }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-6">
+        <div class="card card-body pt-2">
+            <p class="font-weight-light  mb-0">Casos hasta hoy</p>
+            <div class="text-center">
+                <h2 class="casos">{{ datosgobales.todayCases | currency:'':'':'0.0' }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card card-body pt-2">
+            <p class="font-weight-light  mb-0">Muertes hasta hoy</p>
+            <div class="text-center">
+                <h2 class="muertes">{{ datosgobales.todayDeaths | currency:'':'':'0.0' }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-12">
+        <div class="card card-body pt-2">
+            <p class="font-weight-light  mb-0">Número de pruebas practicadas</p>
+            <div class="text-center">
+                <h2 class="casos">{{ datosgobales.tests | currency:'':'':'0.0' }}</h2>
+            </div>
+        </div>
+    </div>
+</div>

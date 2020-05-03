@@ -1,0 +1,84 @@
+<h3>Información Relacionada sobre {{ pais.country }}</h3>
+<hr/>
+<div class="row">
+    <div class="col-md-3">
+        <div class="card">
+            <img [src]="pais.countryInfo.flag" class="card-img-top" [alt]="pais.country">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Corte: </label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="fecha form-control-plaintext" id="staticFecha" [value]="pais.updated | date: 'short'">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">País: </label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="pais form-control-plaintext" id="staticPais" [value]="pais.country">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Continente: </label>
+            <div class="col-sm-10">
+              <input type="text" readonly class=" continente form-control-plaintext" id="staticContinente" [value]="pais.continent">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Casos: </label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="casos form-control-plaintext" id="staticEmail" [value]="pais.cases">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Muertes: </label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="muertes form-control-plaintext" id="staticEmail" [value]="pais.deaths">
+            </div>
+        </div>    
+        
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Recuperados: </label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="recuperados form-control-plaintext" id="staticEmail" [value]="pais.recovered">
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Pruebas: </label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="pruebas form-control-plaintext" id="staticEmail" [value]="pais.tests">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Críticos: </label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="criticos form-control-plaintext" id="staticEmail" [value]="pais.critical">
+            </div>
+        </div>    
+        
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Activos: </label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="activos form-control-plaintext" id="staticEmail" [value]="pais.active">
+            </div>
+        </div>
+        
+    </div>
+
+</div>

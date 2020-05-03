@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-12">
+        <div *ngFor="let pais of paises | paginate: { itemsPerPage: 8, currentPage: p }">
+            <div class="card" style="width: 24%; float: left; margin: 0 10px 10px 0;">
+                <img [src]="pais.countryInfo.flag" class="card-img-top" [alt]="pais.country">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6 text-truncate font-weight-bold">
+                            {{pais.country}}
+                        </div>
+                    </div>
+                    <p class="font-weight-light">Muertes: {{ pais.deaths | currency:'':'':'0.0' }}</p>
+                    <p class="font-weight-light">Recuperados: {{ pais.recovered | currency:'':'':'0.0' }}</p>
+                    <p class="font-weight-bold">Total Infectados: {{ pais.cases | currency:'':'':'0.0' }}</p>
+                    <!-- <button type="button" (click) = "buscarPais(pais.country)" class="btn btn-danger">Detalle...</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-md-12 ">
+        <pagination-controls (pageChange)="p = $event" responsive="true"
+        previousLabel="Anterior"
+        nextLabel="Siguiente"></pagination-controls>
+    </div>
+</div>
